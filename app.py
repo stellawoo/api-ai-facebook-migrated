@@ -53,14 +53,13 @@ def fetchRecommendations(g):
             fetched_cids = fclsdict[cls]['cids']
             got_cid = sample(fetched_cids, 1)[0]
             recommend_cids.append(got_cid)
-        return ','.join(recommend_cids)
-#        return {
-#            "speech": ','.join(recommend_cids),
-#            "displayText": ','.join(recommend_cids),
-#            # "data": data,
-#            # "contextOut": [],
-#            "source": "api-ai-facebook-migrated"
-#        }
+        return {
+            "speech": ','.join(recommend_cids),
+            "displayText": ','.join(recommend_cids),
+            # "data": data,
+            # "contextOut": [],
+            "source": "api-ai-facebook-migrated"
+        }
 
 
 # function from yahooWeatherForecast example
